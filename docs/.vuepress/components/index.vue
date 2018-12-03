@@ -1,0 +1,111 @@
+<template>
+    <div id="index">
+        <div class="main">
+            <h1>vue-touch-active</h1>
+            <h2>点击态</h2>
+            <p>一款基于 Vue.js 的点击态组件</p>
+            <div class="opt-wrapper">
+                <router-link :to="{path: '/wiki/'}" class="card-btn">开始</router-link>
+                <a href="https://github.com/mux-team/mux-solution" class="card-btn white">github</a>
+            </div>
+            <div class="feature">
+                <ul>
+                    <li>从目标区域展开，收起后回到目标区域</li>
+                    <li>双击、多点触控进⾏行行放⼤缩小操作</li>
+                    <li>支持下滑隐藏，随位置图⽚渐⼩，背景渐显</li>
+                    <li>上拉可以拉出自定义区域，查看更多信息</li>
+                </ul>
+            </div>
+        </div>
+        <footer>MIT Licensed | Copyright ©2018 MUX</footer>
+    </div>
+</template>
+
+<script>
+import TouchActive from '../../../src/components/touchActive';
+import ResponstiveLink from '../../../src/responsiveLink';
+
+export default {
+    components: {
+        TouchActive
+    },
+    data() {
+        return {
+            rs: {}
+        }
+    },
+    mounted() {
+        this.rs = new ResponstiveLink({
+            $root: '#index'
+        });
+        this.rs.start();
+    }
+}
+</script>
+
+<style lang="stylus" scoped>
+$accentColor = #38f
+$borderColor = #eaecef
+
+#index
+    background-color #fafafa
+    overflow hidden
+    min-height 600px
+
+    .main
+        max-width 500px
+        margin 0 auto
+        text-align center
+
+    .example
+        text-align center
+        width 275px
+
+    h1
+        font-size 42px
+        font-weight 400
+        color #32495f
+        margin 50px auto 30px
+        text-align center
+
+    h2
+        font-size 20px
+        color #6889a9
+        border none
+        margin 20px 0 0
+
+    p
+        font-size 12px
+        color #6889a9
+        margin 0
+
+    .opt-wrapper
+        margin 40px 0
+
+    .card-btn
+        color #fff
+        background linear-gradient(30deg,#3f5b77,#51779b)
+        padding 16px 48px
+        font-size 20px
+        border none
+        cursor pointer
+        line-height 24px
+        margin-right 10px
+
+        &.white
+            background #fff
+            color #32495f
+
+    .feature
+        line-height 32px
+        text-align left
+        margin-top 60px
+
+    footer
+        margin 0 auto 40px
+        text-align center
+        color #999
+
+
+
+</style>
