@@ -3,13 +3,13 @@
 ### NPM
 推荐使用这种方式引入组件
 ```sh
-npm install mux-vue-image-viewer
+npm install mux-vue-touch-active
 ```
 
 ### CDN
 您也可以通过引入js文件的方式来使用
 ```html
-<script src="https://unpkg.com/mux-vue-image-viewer@1.0.0/dist/mux-vue-image-viewer.js"></script>
+<script src="https://unpkg.com/mux-vue-touch-active@1.0.0/dist/mux-vue-touch-active.js"></script>
 ```
 
 ### 下载
@@ -19,16 +19,24 @@ npm install mux-vue-image-viewer
 您可以以组件的形式引入
 ``` html
 <template>
-  <image-viewer></image-viewer>
+  <touch-active></touch-active>
 </template>
 
 <script>
-import ImageViewer from 'mux-vue-image-viewer';
+import {ResponsiveLink, TouchActive, TouchStop} from 'mux-vue-touch-active';
 
 export default {
   components: {
-    ImageViewer,
+    TouchActive,
+    TouchStop
   },
+  mounted() {
+      let rs = new ResponsiveLink({
+          $root: '#root'
+      });
+
+      rs.start();
+  }
 };
 </script>
 

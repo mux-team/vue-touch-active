@@ -13,13 +13,13 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 module.exports = {
     mode: isDebug ? 'development' : 'production',
     entry: {
-        'mux-vue-image-viewer': './src/index'
+        'mux-vue-touch-active': './src/index'
     },
     output: {
         path: path.join(__dirname, '../dist'),
         publicPath: '/',
         filename: '[name].js',
-        library: 'MuxVueImageViewer',
+        library: 'MuxVueTouchActive',
         libraryTarget: 'umd'
     },
     resolve: {

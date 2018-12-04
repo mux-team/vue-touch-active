@@ -28,9 +28,7 @@ module.exports = {
                     children: [
                         '/wiki/example/example1',
                         '/wiki/example/example2',
-                        '/wiki/example/example3',
-                        '/wiki/example/example4',
-                        '/wiki/example/example5'
+                        '/wiki/example/example3'
                     ]
                 },
                 {

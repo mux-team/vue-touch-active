@@ -10,10 +10,8 @@
             </div>
             <div class="feature">
                 <ul>
-                    <li>从目标区域展开，收起后回到目标区域</li>
-                    <li>双击、多点触控进⾏行行放⼤缩小操作</li>
-                    <li>支持下滑隐藏，随位置图⽚渐⼩，背景渐显</li>
-                    <li>上拉可以拉出自定义区域，查看更多信息</li>
+                    <li>支持两种类型的点击态：链接和button</li>
+                    <li>支持自定义点击态背景色的区域位置，颜色，圆角等信息</li>
                 </ul>
             </div>
         </div>
@@ -22,8 +20,7 @@
 </template>
 
 <script>
-import TouchActive from '../../../src/components/touchActive';
-import ResponstiveLink from '../../../src/responsiveLink';
+import {ResponsiveLink, TouchActive, TouchStop} from '../../../src/index';
 
 export default {
     components: {

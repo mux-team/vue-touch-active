@@ -24,35 +24,10 @@
                 <div>button 类型</div>
             </touch-active>
         </touch-active>
-
-        <touch-active class="container result" url="http://www.baidu.com">
-            <h2>常用配置</h2>
-            <div>通过设置组件传入的props的backgroundColor属性、borderRadius、top、left、right、bottom个性化设置点击态效果</div>
-            <touch-active class="example-link"
-                backgroundColor="rgba(220,20,60,0.1)"
-                borderRadius="5"
-                :top=-5
-                :left=-5
-                :right=-5
-                :bottom=-5
-                url="http://www.163.com">
-                <div>点击此div跳转到http://www.163.com</div>
-            </touch-active>
-        </touch-active>
-
-        <touch-active class="container">
-            <h2>外层点击态</h2>
-            <div>通过引入touchStop组件，阻止某块区域点击会触发父级跳转的问题</div>
-            <touch-stop class="stop">
-                <div>阻止外层点击态</div>
-                <touch-active class="block" url="http://www.baidu.com">点击此div触发跳转到http://www.baidu.com</touch-active>
-                <touch-active class="example-button">button</touch-active>
-            </touch-stop>
-        </touch-active>
     </div>
 </template>
 <script>
-import {ResponsiveLink, TouchActive, TouchStop} from '../../src/index';
+import {ResponsiveLink, TouchActive, TouchStop} from '../../../../src/index';
 export default {
     components: {
         TouchActive,
@@ -84,7 +59,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import './css/common';
+@import '../../../../example/src/css/common';
 
 h2
     font-size 16px
@@ -92,7 +67,6 @@ h2
     margin-bottom 10px
 
 .example-container
-    background-color #f5f5f5
     padding 0
     line-height 24px
 
