@@ -20,23 +20,8 @@
 </template>
 
 <script>
-import {ResponsiveLink, TouchActive, TouchStop} from '../../../src/index';
 
 export default {
-    components: {
-        TouchActive
-    },
-    data() {
-        return {
-            rs: {}
-        }
-    },
-    mounted() {
-        this.rs = new ResponstiveLink({
-            $root: '#index'
-        });
-        this.rs.start();
-    }
 }
 </script>
 

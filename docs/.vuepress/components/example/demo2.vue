@@ -16,19 +16,20 @@
     </div>
 </template>
 <script>
-import {ResponsiveLink, TouchActive, TouchStop} from '../../../../src/index';
+// import {ResponsiveLink, TouchActive, TouchStop} from '../../../../src/index';
 
 export default {
-    components: {
-        TouchActive,
-        TouchStop
-    },
+    // components: {
+    //     TouchActive,
+    //     TouchStop
+    // },
     data() {
         return {
             rs: {}
         }
     },
     mounted() {
+        const ResponsiveLink = this.ResponsiveLink;
         this.rs = new ResponsiveLink({
             $root: '#main'
         });

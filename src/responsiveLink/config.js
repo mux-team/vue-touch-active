@@ -59,7 +59,7 @@ export default {
     // Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E216 MicroMessenger/6.6.7 NetType/WIFI Language/zh_CN
     CONF: {
         START_DELAY: (() => {
-            let ua = navigator.userAgent.toLowerCase();
+            let ua = window.navigator.userAgent.toLowerCase();
             if (ua.indexOf('iphone os') > -1) {
                 if (ua.indexOf('mqqbrowser') > -1 || ua.indexOf('micromessenger') > -1) {
                     return 20;

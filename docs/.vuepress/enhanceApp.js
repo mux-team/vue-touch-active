@@ -3,8 +3,7 @@
  */
 import VueHighlightJS from 'vue-highlight.js';
 import 'highlight.js/styles/atom-one-dark.css';
-// import {TouchActive, TouchStop} from '../../src/index';
-// import '../../example/src/css/common';
+import {TouchActive, TouchStop, ResponsiveLink} from '../../src/index';
 
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
@@ -14,6 +13,7 @@ export default ({
 }) => {
   // ...做一些其他的应用级别的优化
   Vue.use(VueHighlightJS)
-//   Vue.use(TouchActive)
-//   Vue.use(TouchStop)
+  Vue.use(TouchActive);
+  Vue.use(TouchStop);
+  Vue.prototype.ResponsiveLink = ResponsiveLink;
 }

@@ -1,6 +1,18 @@
-import TouchActive from './components/touchActive';
-import TouchStop from './components/touchStop';
-import ResponsiveLink from './responsiveLink/responsiveLink';
+import touchActive from './components/touchActive';
+import touchStop from './components/touchStop';
+import ResponsiveLink from './responsiveLink/ResponsiveLink';
+
+const TouchActive = {
+    install: function(Vue) {
+        Vue.component('touch-active', touchActive);
+    }
+};
+
+const TouchStop = {
+    install: function(Vue) {
+        Vue.component('touch-stop', touchStop);
+    }
+};
 
 export {
     TouchActive,
@@ -8,7 +20,5 @@ export {
     ResponsiveLink
 };
 
-if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.component('touch-active', TouchActive);
-    window.Vue.component('touch-stop', TouchStop);
-}
+
+
