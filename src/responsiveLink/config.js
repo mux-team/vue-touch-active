@@ -54,19 +54,7 @@ export default {
 
     EVT_LIST_WIN: 'pageshow tf_touchReset',
 
-    // iOS 下 QQ 和微信浏览器快速点击时不会触发点击态 这里把时间改小
-    // Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/604.3.5 (KHTML, like Gecko) Version/11.0 MQQBrowser/8.4.2 Mobile/15B87 Safari/604.1 MttCustomUA/2 QBWebViewType/1 WKType/1
-    // Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E216 MicroMessenger/6.6.7 NetType/WIFI Language/zh_CN
     CONF: {
-        START_DELAY: (() => {
-            let ua = window.navigator.userAgent.toLowerCase();
-            if (ua.indexOf('iphone os') > -1) {
-                if (ua.indexOf('mqqbrowser') > -1 || ua.indexOf('micromessenger') > -1) {
-                    return 20;
-                }
-            }
-            return 50;
-        })(),
         CLICK_KEEP_TIME: 1500,
         START_KEEP_TIME: 2000,
         END_EXTRA_DELAY: 100

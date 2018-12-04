@@ -29,18 +29,14 @@
         </div>
     </template>
     <script>
-    import {ResponsiveLink, TouchActive, TouchStop} from 'mux-vue-touch-active';
     export default {
-        components: {
-            TouchActive,
-            TouchStop
-        },
         data() {
             return {
                 rs: {}
             }
         },
         mounted() {
+            const ResponsiveLink = this.ResponsiveLink;
             this.rs = new ResponsiveLink({
                 $root: '#main'
             });

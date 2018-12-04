@@ -53,6 +53,8 @@ class ResponsiveLink {
         };
 
         this.rlState = RL_STATE.INIT;
+
+        this.startDelay = this.getStartDelay();
     }
 
     static getLinkProp(node, name) {
@@ -101,6 +103,20 @@ class ResponsiveLink {
                 }, 2500);
             }
         }, false);
+    }
+    
+    getStartDelay() {
+        // iOS 下 QQ 和微信浏览器快速点击时不会触发点击态 这里把时间改小
+        // Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/604.3.5 (KHTML, like Gecko) Version/11.0 MQQBrowser/8.4.2 Mobile/15B87 Safari/604.1 MttCustomUA/2 QBWebViewType/1 WKType/1
+        // Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E216 MicroMessenger/6.6.7 NetType/WIFI Language/zh_CN
+        let ua = window.navigator.userAgent.toLowerCase();
+        if (ua.indexOf('iphone os') > -1) {
+            if (ua.indexOf('mqqbrowser') > -1 || ua.indexOf('micromessenger') > -1) {
+                return 20;
+            }
+        }
+
+        return 50;
     }
 
     start() {
@@ -185,7 +201,7 @@ class ResponsiveLink {
         clearTimeout(this.timerStart);
         this.timerStart = setTimeout(() => {
             !this.isScrolling && this.showMask(resNode, CONF.START_KEEP_TIME);
-        }, CONF.START_DELAY);
+        }, this.startDelay);
     }
 
     onEnd(e) {
@@ -193,7 +209,7 @@ class ResponsiveLink {
             clearTimeout(this.timerEnd);
             this.timerEnd = setTimeout(() => {
                 this.hideMask();
-            }, CONF.START_DELAY + CONF.END_EXTRA_DELAY);
+            }, this.startDelay + CONF.END_EXTRA_DELAY);
         }
     }
 
