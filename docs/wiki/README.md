@@ -9,7 +9,7 @@ npm install mux-vue-touch-active
 ### CDN
 您也可以通过引入js文件的方式来使用
 ```html
-<script src="https://unpkg.com/mux-vue-touch-active@1.0.1/dist/mux-vue-touch-active.js"></script>
+<script src="https://unpkg.com/mux-vue-touch-active@1.0.2/dist/mux-vue-touch-active.js"></script>
 ```
 
 ### 下载
@@ -19,7 +19,9 @@ npm install mux-vue-touch-active
 您可以以组件的形式引入
 ``` html
 <template>
-  <touch-active></touch-active>
+    <div id="root">
+        <touch-active></touch-active>
+    </div>
 </template>
 
 <script>
