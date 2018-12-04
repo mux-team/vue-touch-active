@@ -26,8 +26,8 @@
                 <div>点击此div触发跳转到http://www.163.com</div>
             </touch-active>
             <div class="example-title">不设置组件的url属性，则默认为button类型</div>
-            <touch-active class="example-button">
-                <div>button 类型</div>
+            <touch-active isJump class="example-button">
+                <div>1111button 类型</div>
             </touch-active>
         </touch-active>
 
@@ -66,7 +66,7 @@ export default {
     },
     mounted() {
         const ResponsiveLink = this.ResponsiveLink;
-        
+
         this.rs = new ResponsiveLink({
             $root: '#main'
         });

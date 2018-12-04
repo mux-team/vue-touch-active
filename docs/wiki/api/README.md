@@ -10,6 +10,7 @@
 | bottom            | 点击态容器absolute定位bottom的位置  |Number|0|否|
 | borderRadius      | 点击态背景色的圆角大小，单位为px  |Number|0|否|
 | url               | 跳转的url地址  |String|false|否|
+| isJump            | 是否是需要跳转的（当组件内部嵌入的dom自带跳转链接时，需要设置isJump来标明时需要跳转的点击类型) | Boolean|false|否|
 
 
 

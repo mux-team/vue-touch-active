@@ -1,7 +1,7 @@
 <template>
     <div
         :rl-node="open ? '' : null"
-        :rl-type="open && !tcUrl ? 'button': null"
+        :rl-type="open && (!tcUrl && !isJump) ? 'button': null"
         :rl-highlight-position="open ? position : null"
         :rl-highlight-color="open ? backgroundColor : null"
         :rl-highlight-radius="open ? borderRadius : null"
@@ -61,6 +61,10 @@ export default {
         backgroundColor: {
             type: String,
             default: 'rgba(0, 0, 0, .05)'
+        },
+        isJump: {
+            type: Boolean,
+            default: false
         },
         expand: {
             type: Boolean,
