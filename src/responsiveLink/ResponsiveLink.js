@@ -273,30 +273,16 @@ class ResponsiveLink {
             return;
         }
 
-        const $maskContainer = this.getMaskContainer(node);
-        if (getComputedStyle($maskContainer).position === 'static') {
-            $maskContainer.style.position = 'relative';
+        if (getComputedStyle(node).position === 'static') {
+            node.style.position = 'relative';
         }
 
-        if (node === $maskContainer) {
-            this.$mask.style.top = 0;
-            this.$mask.style.left = 0;
-            this.$mask.style.right = 0;
-            this.$mask.style.bottom = 0;
-            this.$mask.style.removeProperty('width');
-            this.$mask.style.removeProperty('height');
-        }
-        else {
-            const bound = node.getBoundingClientRect();
-            const boundMask = $maskContainer.getBoundingClientRect();
-
-            this.$mask.style.top = (bound.top - boundMask.top) + 'px';
-            this.$mask.style.left = (bound.left - boundMask.left) + 'px';
-            this.$mask.style.height = bound.height + 'px';
-            this.$mask.style.width = bound.width + 'px';
-            this.$mask.style.removeProperty('right');
-            this.$mask.style.removeProperty('bottom');
-        }
+        this.$mask.style.top = 0;
+        this.$mask.style.left = 0;
+        this.$mask.style.right = 0;
+        this.$mask.style.bottom = 0;
+        this.$mask.style.removeProperty('width');
+        this.$mask.style.removeProperty('height');
 
         this.$mask.style.visibility = 'visible';
 
@@ -311,7 +297,7 @@ class ResponsiveLink {
         this.$maskInner.style.backgroundColor = color;
         this.$maskInner.style.borderRadius = radius;
 
-        $maskContainer.appendChild(this.$mask);
+        node.appendChild(this.$mask);
     }
 
     hideMask() {
@@ -398,10 +384,6 @@ class ResponsiveLink {
             }
         }
         return props;
-    }
-
-    getMaskContainer(node) {
-        return node && node.hasAttribute(ATTR.HIGHLIGHT_SELF) ? node : this.$root;
     }
 
     createLinkEle(linkObj) {

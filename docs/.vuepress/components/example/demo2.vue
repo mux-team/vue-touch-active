@@ -1,8 +1,7 @@
 <template>
     <div class="example-container" id="main">
         <touch-active class="container result" url="http://www.baidu.com">
-            <h2>常用配置</h2>
-            <div>通过设置组件传入的props的backgroundColor属性、borderRadius、top、left、right、bottom个性化设置点击态效果</div>
+            <h2>个性化配置</h2>
             <touch-active class="example-link"
                 backgroundColor="rgba(220,20,60,0.1)"
                 borderRadius="5"
@@ -65,7 +64,6 @@ h2
     margin-bottom 20px
     padding 10px
     background #fff
-    min-height 200px
 
     a
         display inline-block

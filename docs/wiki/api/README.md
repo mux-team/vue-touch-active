@@ -2,8 +2,9 @@
 
 | 名称               | 说明                                | 类型     | 默认值        |  必选 |
 |-------------------|-------------------------------------|----------|--------------|------|
+| open              | 是否开启点击态 | Boolean|true|否|
 | backgroundColor   | 点击态背景色              |String|ragb(0,0,0,.05)|否|
-| top               | 点击态背景色距离元素top的位置   |Number|0|否|
+| top               | 点击态背景absolute的top的位置   |Number|0|否|
 | left              | 点击态背景色距离元素left的位置   |Number|0|否|
 | right             | 点击态背景色距离元素right的位置   |Number|0|否|
 | bottom            | 点击态背景色距离元素bottom的位置  |Number|0|否|

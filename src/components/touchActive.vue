@@ -77,10 +77,6 @@ export default {
         urlParams: {
             type: Object,
             default: () => {}
-        },
-        title: {
-            type: String,
-            default: ''
         }
     },
     computed: {

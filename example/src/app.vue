@@ -16,6 +16,12 @@
             <h2>默认使用方法</h2>
             <div class="example-title">通过设置组件传入的props的url属性为http://www.baidu.com</div>
             <touch-active class="example-link"
+                :self="false"
+                url="http://www.163.com">
+                <div>点111击此div触发跳转到http://www.163.com</div>
+            </touch-active>
+            <touch-active class="example-link"
+                expand
                 url="http://www.163.com">
                 <div>点击此div触发跳转到http://www.163.com</div>
             </touch-active>

@@ -30,8 +30,7 @@ export default {
         NODE: 'rl-node',
         TYPE: 'rl-type',
         LINK_PRE: 'rl-link-',
-        HIGHLIGHT_PRE: 'rl-highlight-',
-        HIGHLIGHT_SELF: 'rl-highlight-self'
+        HIGHLIGHT_PRE: 'rl-highlight-'
     },
     // 隐藏显示
     NODE_EVENT: {

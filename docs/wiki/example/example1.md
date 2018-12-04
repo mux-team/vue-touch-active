@@ -1,6 +1,6 @@
 # 默认示例
 
-<common-demo title="默认用法" description="默认用法示例">
+<common-demo title="默认用法" description="引入组件后通过给组件传url设定为链接类型，不传url为button类型">
   <example-demo1></example-demo1>
   <highlight-code slot="codeText" lang="vue">
     <template>
@@ -16,15 +16,12 @@
                     <touch-active @clickLink="rsDestroy" class="example-button">点击销毁</touch-active>
                 </div>
             </div>
-
             <touch-active class="container" url="http://www.baidu.com">
                 <h2>默认使用方法</h2>
-                <div class="example-title">通过设置组件传入的props的url属性为http://www.baidu.com</div>
                 <touch-active class="example-link"
                     url="http://www.163.com">
                     <div>点击此div触发跳转到http://www.163.com</div>
                 </touch-active>
-                <div class="example-title">不设置组件的url属性，则默认为button类型</div>
                 <touch-active class="example-button">
                     <div>button 类型</div>
                 </touch-active>
@@ -32,7 +29,7 @@
         </div>
     </template>
     <script>
-    import {ResponsiveLink, TouchActive, TouchStop} from '../../../../src/index';
+    import {ResponsiveLink, TouchActive, TouchStop} from 'mux-vue-touch-active';
     export default {
         components: {
             TouchActive,

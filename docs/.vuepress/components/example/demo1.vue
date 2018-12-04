@@ -13,13 +13,11 @@
         </div>
 
         <touch-active class="container" url="http://www.baidu.com">
-            <h2>默认使用方法</h2>
-            <div class="example-title">通过设置组件传入的props的url属性为http://www.baidu.com</div>
+            <h2>默认示例</h2>
             <touch-active class="example-link"
                 url="http://www.163.com">
                 <div>点击此div触发跳转到http://www.163.com</div>
             </touch-active>
-            <div class="example-title">不设置组件的url属性，则默认为button类型</div>
             <touch-active class="example-button">
                 <div>button 类型</div>
             </touch-active>
@@ -74,7 +72,6 @@ h2
     margin-bottom 20px
     padding 10px
     background #fff
-    min-height 200px
 
     a
         display inline-block

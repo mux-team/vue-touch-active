@@ -1,6 +1,6 @@
 {
   "name": "mux-vue-touch-active",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "移动端点击态",
   "main": "dist/mux-vue-touch-active.js",
   "scripts": {
